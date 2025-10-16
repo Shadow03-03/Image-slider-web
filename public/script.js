@@ -16,7 +16,7 @@ function showSlide(index) {
 
   images.forEach((imgSrc, i) => {
     const img = document.createElement('img');
-    img.src = 'uploads/' + imgSrc;
+    img.src = '/uploads/' + imageName;
     if (i === index) {
       img.classList.add('active');
     }
@@ -83,3 +83,4 @@ function resetInterval() {
 }
 
 window.onload = loadImages;
+
