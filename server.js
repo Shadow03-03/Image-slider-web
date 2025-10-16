@@ -9,7 +9,8 @@ const upload = multer({ dest: "uploads/" });
 // Serve frontend files from 'public' folder
 app.use(express.static("public"));
 // Serve uploaded images
-app.use("/uploads", express.static("uploads"));
+app.use('/uploads', express.static('uploads'));
+
 
 // Upload endpoint
 app.post("/upload", upload.single("file"), (req, res) => {
@@ -34,3 +35,4 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
